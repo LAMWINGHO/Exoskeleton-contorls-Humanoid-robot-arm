@@ -1,1 +1,1 @@
-# Michael
+# Exoskeleton contorls Humanoid robot arm
