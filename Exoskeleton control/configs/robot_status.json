@@ -1,0 +1,90 @@
+{
+    "RobotLeft": {
+        "L1":{
+            "targetAngle": "0.0",
+            "readAngle": "0.0",
+            "torque": "0.0",
+            "current": "0.0"
+        },
+        "L2":{
+            "targetAngle": "0.0",
+            "readAngle": "0.0",
+            "torque": "0.0",
+            "current": "0.0"
+        },
+        "L3":{
+            "targetAngle": "0.0",
+            "readAngle": "0.0",
+            "torque": "0.0",
+            "current": "0.0"
+        },
+        "L4":{
+            "targetAngle": "0.0",
+            "readAngle": "0.0",
+            "torque": "0.0",
+            "current": "0.0"
+        },
+        "L5":{
+            "targetAngle": "0.0",
+            "readAngle": "0.0",
+            "torque": "0.0",
+            "current": "0.0"
+        },
+        "L6":{
+            "targetAngle": "0.0",
+            "readAngle": "0.0",
+            "torque": "0.0",
+            "current": "0.0"
+        },
+        "L7":{
+            "targetAngle": "0.0",
+            "readAngle": "0.0",
+            "torque": "0.0",
+            "current": "0.0"
+        }
+    },
+	"RobotRight": {
+        "R1":{
+            "targetAngle": "0.0",
+            "readAngle": "0.0",
+            "torque": "0.0",
+            "current": "0.0"
+        },
+        "R2":{
+            "targetAngle": "0.0",
+            "readAngle": "0.0",
+            "torque": "0.0",
+            "current": "0.0"
+        },
+        "R3":{
+            "targetAngle": "0.0",
+            "readAngle": "0.0",
+            "torque": "0.0",
+            "current": "0.0"
+        },
+        "R4":{
+            "targetAngle": "0.0",
+            "readAngle": "0.0",
+            "torque": "0.0",
+            "current": "0.0"
+        },
+        "R5":{
+            "targetAngle": "0.0",
+            "readAngle": "0.0",
+            "torque": "0.0",
+            "current": "0.0"
+        },
+        "R6":{
+            "targetAngle": "0.0",
+            "readAngle": "0.0",
+            "torque": "0.0",
+            "current": "0.0"
+        },
+        "R7":{
+            "targetAngle": "0.0",
+            "readAngle": "0.0",
+            "torque": "0.0",
+            "current": "0.0"
+        }
+    }    
+}

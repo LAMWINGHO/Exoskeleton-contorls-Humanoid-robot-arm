@@ -1,0 +1,54 @@
+{
+    "Mode": 0,
+    "Setting": [
+        {
+            "motor": "L1",
+			"ID": "1",
+            "encodeLow": 0,
+            "encodeHigh": 100,
+            "encodeOffset": 4,
+            "drivingTorque": 0
+        },
+        {
+            "motor": "L2",
+			"ID": "2",
+            "encodeLow": 0,
+            "encodeHigh": 102,
+            "encodeOffset": 0,
+            "drivingTorque": 0
+        },
+        {
+            "motor": "L3",
+			"ID": "3",
+            "encodeLow": 0,
+            "encodeHigh": 100,
+            "encodeOffset": 4,
+            "drivingTorque": 0
+        },
+        {
+            "motor": "L4",
+			"ID": "4",
+            "encodeLow": 0,
+            "encodeHigh": 100,
+            "encodeOffset": 4,
+            "drivingTorque": 0
+        }
+    ],
+	"Right": [
+        {
+            "motor": "1",
+			"ID": "1",
+            "encodeLow": 0,
+            "encodeHigh": 100,
+            "encodeOffset": 5
+        },
+        {
+            "motor": "2",
+			"ID": "2",
+            "encodeLow": 0,
+            "encodeHigh": 102,
+            "encodeOffset": 6
+        }
+    ]
+	
+}

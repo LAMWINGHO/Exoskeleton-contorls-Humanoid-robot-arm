@@ -1,0 +1,697 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+    table {
+        width: 10%;
+    }
+    p.outset {border-style: outset;}
+</style>
+<body>
+    <h1>Exo-skeleton Settings</h1>
+    <h2>Motor Parameters</h2>
+    <hr style="height:5px;border-width:0;color:gray;background-color:gray">
+    <table>
+        <tr><td>Left Exo</td>
+            <td>Encoder LowerLimit</td>
+            <td>Encoder UpperLimit</td>
+            <td>Toruqe LowerLimit</td>
+            <td>Toruqe UpperLimit</td>
+            <td>Torque Ratio</td>
+            <td>Encoder Offset</td>
+            <td>Driving Toruqe</td>
+        </tr>
+        <tr>
+            <td>Motor1</td>  
+            <td><input id="LM1_encodeLow" type="text"></input></td>
+            <td><input id="LM1_encodeHigh" type="text"></input></td> 
+            <td><input id="LM1_torqueLow" type="text"></input></td>
+            <td><input id="LM1_torqueHigh" type="text"></input></td>
+            <td><input id="LM1_torqueRatio" type="text"></input></td>
+            <td><input id="LM1_encodeOffset" type="text"></input></td>
+            <td><input id="LM1_torque" type="text"></input></td>
+        </tr>
+        <tr>
+            <td>Motor2</td>  
+            <td><input id="LM2_encodeLow" type="text"></input></td>
+            <td><input id="LM2_encodeHigh" type="text"></input></td>
+            <td><input id="LM2_torqueLow" type="text"></input></td>
+            <td><input id="LM2_torqueHigh" type="text"></input></td>         
+            <td><input id="LM2_torqueRatio" type="text"></input></td> 
+            <td><input id="LM2_encodeOffset" type="text"></input></td>
+            <td><input id="LM2_torque" type="text"></input></td>
+        </tr>
+        <tr>
+            <td>Motor3</td>  
+            <td><input id="LM3_encodeLow" type="text"></input></td>
+            <td><input id="LM3_encodeHigh" type="text"></input></td>          
+            <td><input id="LM3_torqueLow" type="text"></input></td>
+            <td><input id="LM3_torqueHigh" type="text"></input></td>
+            <td><input id="LM3_torqueRatio" type="text"></input></td> 
+            <td><input id="LM3_encodeOffset" type="text"></input></td>
+            <td><input id="LM3_torque" type="text"></input></td>
+        </tr>
+        <tr>
+            <td>Motor4</td>  
+            <td><input id="LM4_encodeLow" type="text"></input></td>
+            <td><input id="LM4_encodeHigh" type="text"></input></td>          
+            <td><input id="LM4_torqueLow" type="text"></input></td>
+            <td><input id="LM4_torqueHigh" type="text"></input></td>
+            <td><input id="LM4_torqueRatio" type="text"></input></td> 
+            <td><input id="LM4_encodeOffset" type="text"></input></td>
+            <td><input id="LM4_torque" type="text"></input></td>
+        </tr>
+        <tr>
+            <td>Motor5</td>  
+            <td><input id="LM5_encodeLow" type="text"></input></td>
+            <td><input id="LM5_encodeHigh" type="text"></input></td>          
+            <td><input id="LM5_torqueLow" type="text"></input></td>
+            <td><input id="LM5_torqueHigh" type="text"></input></td>
+            <td><input id="LM5_torqueRatio" type="text"></input></td> 
+            <td><input id="LM5_encodeOffset" type="text"></input></td>
+            <td><input id="LM5_torque" type="text"></input></td>
+        </tr>
+        <tr>
+            <td>Motor6</td>  
+            <td><input id="LM6_encodeLow" type="text"></input></td>
+            <td><input id="LM6_encodeHigh" type="text"></input></td>          
+            <td><input id="LM6_torqueLow" type="text"></input></td>
+            <td><input id="LM6_torqueHigh" type="text"></input></td>
+            <td><input id="LM6_torqueRatio" type="text"></input></td> 
+            <td><input id="LM6_encodeOffset" type="text"></input></td>
+            <td><input id="LM6_torque" type="text"></input></td>
+        </tr>
+        <tr>
+            <td>Motor7</td>  
+            <td><input id="LM7_encodeLow" type="text"></input></td>
+            <td><input id="LM7_encodeHigh" type="text"></input></td>          
+            <td><input id="LM7_torqueLow" type="text"></input></td>
+            <td><input id="LM7_torqueHigh" type="text"></input></td>
+            <td><input id="LM7_torqueRatio" type="text"></input></td> 
+            <td><input id="LM7_encodeOffset" type="text"></input></td>
+            <td><input id="LM7_torque" type="text"></input></td>
+        </tr>
+        <tr>
+            <td>Motor8</td>  
+            <td><input id="LM8_encodeLow" type="text"></input></td>
+            <td><input id="LM8_encodeHigh" type="text"></input></td>          
+            <td><input id="LM8_torqueLow" type="text"></input></td>
+            <td><input id="LM8_torqueHigh" type="text"></input></td>
+            <td><input id="LM8_torqueRatio" type="text"></input></td> 
+            <td><input id="LM8_encodeOffset" type="text"></input></td>
+            <td><input id="LM8_torque" type="text"></input></td>
+        </tr>
+
+      </table>
+
+      <table>
+        <tr><td>Right Exo</td>
+            <td>Encoder LowerLimit</td>
+            <td>Encoder UpperLimit</td>
+            <td>Toruqe LowerLimit</td>
+            <td>Toruqe UpperLimit</td>
+            <td>Torque Ratio</td>
+            <td>Encoder Offset</td>
+            <td>Driving Toruqe</td>
+        </tr>
+        <tr>
+            <td>Motor1</td>  
+            <td><input id="RM1_encodeLow" type="text"></input></td>
+            <td><input id="RM1_encodeHigh" type="text"></input></td> 
+            <td><input id="RM1_torqueLow" type="text"></input></td>
+            <td><input id="RM1_torqueHigh" type="text"></input></td>
+            <td><input id="RM1_torqueRatio" type="text"></input></td>
+            <td><input id="RM1_encodeOffset" type="text"></input></td>
+            <td><input id="RM1_torque" type="text"></input></td>
+        </tr>
+        <tr>
+            <td>Motor2</td>  
+            <td><input id="RM2_encodeLow" type="text"></input></td>
+            <td><input id="RM2_encodeHigh" type="text"></input></td>
+            <td><input id="RM2_torqueLow" type="text"></input></td>
+            <td><input id="RM2_torqueHigh" type="text"></input></td>
+            <td><input id="RM2_torqueRatio" type="text"></input></td>
+            <td><input id="RM2_encodeOffset" type="text"></input></td>
+            <td><input id="RM2_torque" type="text"></input></td>
+        </tr>
+        <tr>
+            <td>Motor3</td>  
+            <td><input id="RM3_encodeLow" type="text"></input></td>
+            <td><input id="RM3_encodeHigh" type="text"></input></td>          
+            <td><input id="RM3_torqueLow" type="text"></input></td>
+            <td><input id="RM3_torqueHigh" type="text"></input></td>
+            <td><input id="RM3_torqueRatio" type="text"></input></td>
+            <td><input id="RM3_encodeOffset" type="text"></input></td>
+            <td><input id="RM3_torque" type="text"></input></td>
+        </tr>
+        <tr>
+            <td>Motor4</td>  
+            <td><input id="RM4_encodeLow" type="text"></input></td>
+            <td><input id="RM4_encodeHigh" type="text"></input></td>          
+            <td><input id="RM4_torqueLow" type="text"></input></td>
+            <td><input id="RM4_torqueHigh" type="text"></input></td>
+            <td><input id="RM4_torqueRatio" type="text"></input></td>
+            <td><input id="RM4_encodeOffset" type="text"></input></td>
+            <td><input id="RM4_torque" type="text"></input></td>
+        </tr>
+        <tr>
+            <td>Motor5</td>  
+            <td><input id="RM5_encodeLow" type="text"></input></td>
+            <td><input id="RM5_encodeHigh" type="text"></input></td>          
+            <td><input id="RM5_torqueLow" type="text"></input></td>
+            <td><input id="RM5_torqueHigh" type="text"></input></td>
+            <td><input id="RM5_torqueRatio" type="text"></input></td>
+            <td><input id="RM5_encodeOffset" type="text"></input></td>
+            <td><input id="RM5_torque" type="text"></input></td>
+        </tr>
+        <tr>
+            <td>Motor6</td>  
+            <td><input id="RM6_encodeLow" type="text"></input></td>
+            <td><input id="RM6_encodeHigh" type="text"></input></td>          
+            <td><input id="RM6_torqueLow" type="text"></input></td>
+            <td><input id="RM6_torqueHigh" type="text"></input></td>
+            <td><input id="RM6_torqueRatio" type="text"></input></td>
+            <td><input id="RM6_encodeOffset" type="text"></input></td>
+            <td><input id="RM6_torque" type="text"></input></td>
+        </tr>
+        <tr>
+            <td>Motor7</td>  
+            <td><input id="RM7_encodeLow" type="text"></input></td>
+            <td><input id="RM7_encodeHigh" type="text"></input></td>          
+            <td><input id="RM7_torqueLow" type="text"></input></td>
+            <td><input id="RM7_torqueHigh" type="text"></input></td>
+            <td><input id="RM7_torqueRatio" type="text"></input></td>
+            <td><input id="RM7_encodeOffset" type="text"></input></td>
+            <td><input id="RM7_torque" type="text"></input></td>
+        </tr>
+        <tr>
+            <td>Motor8</td>  
+            <td><input id="RM8_encodeLow" type="text"></input></td>
+            <td><input id="RM8_encodeHigh" type="text"></input></td>          
+            <td><input id="RM8_torqueLow" type="text"></input></td>
+            <td><input id="RM8_torqueHigh" type="text"></input></td>
+            <td><input id="RM8_torqueRatio" type="text"></input></td>
+            <td><input id="RM8_encodeOffset" type="text"></input></td>
+            <td><input id="RM8_torque" type="text"></input></td>
+        </tr>
+
+      </table>
+      <p>
+      <label for="Robot Type">Robot Type:</label>
+      <select name="robotType" id="robotType">
+        <option value="ME4">ME4</option>
+        <option value="ME3">ME3</option>
+      </select>
+    </p>
+
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+    <button id="send"> Send </button> <button id="read"> Read </button> 
+    <BR><BR>
+        <button id="save"> Save as Default </button>
+        <BR><BR>
+   
+    <button id="reset"> Reset </button>
+	<h2>Operation</h2>
+    <hr style="height:5px;border-width:0;color:gray;background-color:gray">
+    <p>Control:&nbsp&nbsp&nbsp<button id="start">Start</button>     <button id="stop">Stop</button><BR></p>
+    
+    <p>Exo-skeleton and robot Alignment:&nbsp&nbsp&nbsp<button id="align"> Align </button><BR>
+        <p>
+        <label for="TorqueSim">Tourqe Simulator:</label>
+          <select name="TorqueSimHand" id="TorqueSimHand">
+            <option value="Left">Left</option>
+            <option value="Right">Right</option>
+          </select>
+          <select name="TorqueSimNum" id="TorqueSimNum">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+          <select name="TorqueSimFormat" id="TorqueSimFormat">
+            <option value="PositionMove">Position Move</option>
+            <option value="NegativeMove">Negative Move</option>
+            <option value="PositionPulse">Position Pulse</option>
+            <option value="NegativePulse">Negative Pulse</option>
+          </select>
+            <!-- <input type="file" id="openfile" />
+
+            <br>
+            <pre id="filecontents"></pre> -->
+            <button id="send_torque">Send</button>    
+    <br>
+    
+   
+    <!-- <pre id="filecontents"></pre> -->
+
+        <hr style="height:3px;border-width:0;color:gray;background-color:gray">
+
+        
+      
+    
+    <h2>Message</h2>
+    <hr style="height:5px;border-width:0;color:gray;background-color:gray">
+    <textarea id="log" cols=100 rows=50>
+    </textarea>
+    <script>
+var sock = new WebSocket("ws://192.168.3.7:45680/ws");
+
+
+
+function isJSON(str) {
+    try {
+        return (JSON.parse(str) && !!str);
+    } catch (e) {
+        return false;
+    }
+}
+//
+sock.onopen = ()=>{
+    console.log('open')
+}
+sock.onerror = (e)=>{
+    console.log('error',e)
+}
+sock.onclose = ()=>{
+    console.log('close')
+}
+
+// var settingJson = {
+//     "Left":[
+//         {
+//         motor: '1',
+//         encodeLow: 0 ,
+//         encodeHigh: 100 ,
+//         encodeOffset: 4
+//         },
+//         {
+//         motor: '2',
+//         encodeLow: 0 ,
+//         encodeHigh: 100 ,
+//         encodeOffset: 4
+//         }
+//     ]
+    
+// };
+var settingJson;
+var JsonObj;
+
+sock.onmessage = (evt)=>{
+    console.log(evt)
+    flag =  isJSON(evt.data);
+    let pos = evt.data.search("Motor_Setting");
+    if (flag != false && pos!=-1)
+    {
+        settingJson = JSON.parse(evt.data);
+        document.getElementById("robotType").value = settingJson.Robot_Type;
+        document.getElementById("LM1_encodeLow").value = settingJson.Motor_Setting.L1.encodeLow;
+        document.getElementById("LM1_encodeHigh").value = settingJson.Motor_Setting.L1.encodeHigh;
+        document.getElementById("LM1_torqueLow").value = settingJson.Motor_Setting.L1.torqueLow;
+        document.getElementById("LM1_torqueHigh").value = settingJson.Motor_Setting.L1.torqueHigh;
+        document.getElementById("LM1_encodeOffset").value = settingJson.Motor_Setting.L1.encodeOffset;
+        document.getElementById("LM1_torqueRatio").value = settingJson.Motor_Setting.L1.torqueRatio;
+        document.getElementById("LM1_torque").value = settingJson.Motor_Setting.L1.drivingTorque;
+
+        document.getElementById("LM2_encodeLow").value = settingJson.Motor_Setting.L2.encodeLow;
+        document.getElementById("LM2_encodeHigh").value = settingJson.Motor_Setting.L2.encodeHigh;
+        document.getElementById("LM2_torqueLow").value = settingJson.Motor_Setting.L2.torqueLow;
+        document.getElementById("LM2_torqueHigh").value = settingJson.Motor_Setting.L2.torqueHigh;
+        document.getElementById("LM2_encodeOffset").value = settingJson.Motor_Setting.L2.encodeOffset;
+        document.getElementById("LM2_torqueRatio").value = settingJson.Motor_Setting.L2.torqueRatio;
+        document.getElementById("LM2_torque").value = settingJson.Motor_Setting.L2.drivingTorque;
+
+        document.getElementById("LM3_encodeLow").value = settingJson.Motor_Setting.L3.encodeLow;
+        document.getElementById("LM3_encodeHigh").value = settingJson.Motor_Setting.L3.encodeHigh;
+        document.getElementById("LM3_torqueLow").value = settingJson.Motor_Setting.L3.torqueLow;
+        document.getElementById("LM3_torqueHigh").value = settingJson.Motor_Setting.L3.torqueHigh;
+        document.getElementById("LM3_encodeOffset").value = settingJson.Motor_Setting.L3.encodeOffset;
+        document.getElementById("LM3_torqueRatio").value = settingJson.Motor_Setting.L3.torqueRatio;
+        document.getElementById("LM3_torque").value = settingJson.Motor_Setting.L3.drivingTorque;
+
+        document.getElementById("LM4_encodeLow").value = settingJson.Motor_Setting.L4.encodeLow;
+        document.getElementById("LM4_encodeHigh").value = settingJson.Motor_Setting.L4.encodeHigh;
+        document.getElementById("LM4_torqueLow").value = settingJson.Motor_Setting.L4.torqueLow;
+        document.getElementById("LM4_torqueHigh").value = settingJson.Motor_Setting.L4.torqueHigh;
+        document.getElementById("LM4_encodeOffset").value = settingJson.Motor_Setting.L4.encodeOffset;
+        document.getElementById("LM4_torqueRatio").value = settingJson.Motor_Setting.L4.torqueRatio;
+        document.getElementById("LM4_torque").value = settingJson.Motor_Setting.L4.drivingTorque;
+        
+        document.getElementById("LM5_encodeLow").value = settingJson.Motor_Setting.L5.encodeLow;
+        document.getElementById("LM5_encodeHigh").value = settingJson.Motor_Setting.L5.encodeHigh;
+        document.getElementById("LM5_torqueLow").value = settingJson.Motor_Setting.L5.torqueLow;
+        document.getElementById("LM5_torqueHigh").value = settingJson.Motor_Setting.L5.torqueHigh;
+        document.getElementById("LM5_encodeOffset").value = settingJson.Motor_Setting.L5.encodeOffset;
+        document.getElementById("LM5_torqueRatio").value = settingJson.Motor_Setting.L5.torqueRatio;
+        document.getElementById("LM5_torque").value = settingJson.Motor_Setting.L5.drivingTorque;
+
+        document.getElementById("LM6_encodeLow").value = settingJson.Motor_Setting.L6.encodeLow;
+        document.getElementById("LM6_encodeHigh").value = settingJson.Motor_Setting.L6.encodeHigh;
+        document.getElementById("LM6_torqueLow").value = settingJson.Motor_Setting.L6.torqueLow;
+        document.getElementById("LM6_torqueHigh").value = settingJson.Motor_Setting.L6.torqueHigh;
+        document.getElementById("LM6_encodeOffset").value = settingJson.Motor_Setting.L6.encodeOffset;
+        document.getElementById("LM6_torqueRatio").value = settingJson.Motor_Setting.L6.torqueRatio;
+        document.getElementById("LM6_torque").value = settingJson.Motor_Setting.L6.drivingTorque;
+        
+        document.getElementById("LM7_encodeLow").value = settingJson.Motor_Setting.L7.encodeLow;
+        document.getElementById("LM7_encodeHigh").value = settingJson.Motor_Setting.L7.encodeHigh;
+        document.getElementById("LM7_torqueLow").value = settingJson.Motor_Setting.L7.torqueLow;
+        document.getElementById("LM7_torqueHigh").value = settingJson.Motor_Setting.L7.torqueHigh;
+        document.getElementById("LM7_encodeOffset").value = settingJson.Motor_Setting.L7.encodeOffset;
+        document.getElementById("LM7_torqueRatio").value = settingJson.Motor_Setting.L7.torqueRatio;
+        document.getElementById("LM7_torque").value = settingJson.Motor_Setting.L7.drivingTorque;
+
+        document.getElementById("LM8_encodeLow").value = settingJson.Motor_Setting.L8.encodeLow;
+        document.getElementById("LM8_encodeHigh").value = settingJson.Motor_Setting.L8.encodeHigh;
+        document.getElementById("LM8_torqueLow").value = settingJson.Motor_Setting.L8.torqueLow;
+        document.getElementById("LM8_torqueHigh").value = settingJson.Motor_Setting.L8.torqueHigh;
+        document.getElementById("LM8_encodeOffset").value = settingJson.Motor_Setting.L8.encodeOffset;
+        document.getElementById("LM8_torqueRatio").value = settingJson.Motor_Setting.L8.torqueRatio;
+        document.getElementById("LM8_torque").value = settingJson.Motor_Setting.L8.drivingTorque;
+
+        document.getElementById("RM1_encodeLow").value = settingJson.Motor_Setting.R1.encodeLow;
+        document.getElementById("RM1_encodeHigh").value = settingJson.Motor_Setting.R1.encodeHigh;
+        document.getElementById("RM1_torqueLow").value = settingJson.Motor_Setting.R1.torqueLow;
+        document.getElementById("RM1_torqueHigh").value = settingJson.Motor_Setting.R1.torqueHigh;
+        document.getElementById("RM1_encodeOffset").value = settingJson.Motor_Setting.R1.encodeOffset;
+        document.getElementById("RM1_torqueRatio").value = settingJson.Motor_Setting.R1.torqueRatio;
+        document.getElementById("RM1_torque").value = settingJson.Motor_Setting.R1.drivingTorque;
+
+        document.getElementById("RM2_encodeLow").value = settingJson.Motor_Setting.R2.encodeLow;
+        document.getElementById("RM2_encodeHigh").value = settingJson.Motor_Setting.R2.encodeHigh;
+        document.getElementById("RM2_torqueLow").value = settingJson.Motor_Setting.R2.torqueLow;
+        document.getElementById("RM2_torqueHigh").value = settingJson.Motor_Setting.R2.torqueHigh;
+        document.getElementById("RM2_encodeOffset").value = settingJson.Motor_Setting.R2.encodeOffset;
+        document.getElementById("RM2_torqueRatio").value = settingJson.Motor_Setting.R2.torqueRatio;
+        document.getElementById("RM2_torque").value = settingJson.Motor_Setting.R2.drivingTorque;
+
+        document.getElementById("RM3_encodeLow").value = settingJson.Motor_Setting.R3.encodeLow;
+        document.getElementById("RM3_encodeHigh").value = settingJson.Motor_Setting.R3.encodeHigh;
+        document.getElementById("RM3_torqueLow").value = settingJson.Motor_Setting.R3.torqueLow;
+        document.getElementById("RM3_torqueHigh").value = settingJson.Motor_Setting.R3.torqueHigh;
+        document.getElementById("RM3_encodeOffset").value = settingJson.Motor_Setting.R3.encodeOffset;
+        document.getElementById("RM3_torqueRatio").value = settingJson.Motor_Setting.R3.torqueRatio;
+        document.getElementById("RM3_torque").value = settingJson.Motor_Setting.R3.drivingTorque;
+
+        document.getElementById("RM4_encodeLow").value = settingJson.Motor_Setting.R4.encodeLow;
+        document.getElementById("RM4_encodeHigh").value = settingJson.Motor_Setting.R4.encodeHigh;
+        document.getElementById("RM4_torqueLow").value = settingJson.Motor_Setting.R4.torqueLow;
+        document.getElementById("RM4_torqueHigh").value = settingJson.Motor_Setting.R4.torqueHigh;
+        document.getElementById("RM4_encodeOffset").value = settingJson.Motor_Setting.R4.encodeOffset;
+        document.getElementById("RM4_torqueRatio").value = settingJson.Motor_Setting.R4.torqueRatio;
+        document.getElementById("RM4_torque").value = settingJson.Motor_Setting.R4.drivingTorque;
+        
+        document.getElementById("RM5_encodeLow").value = settingJson.Motor_Setting.R5.encodeLow;
+        document.getElementById("RM5_encodeHigh").value = settingJson.Motor_Setting.R5.encodeHigh;
+        document.getElementById("RM5_torqueLow").value = settingJson.Motor_Setting.R5.torqueLow;
+        document.getElementById("RM5_torqueHigh").value = settingJson.Motor_Setting.R5.torqueHigh;
+        document.getElementById("RM5_encodeOffset").value = settingJson.Motor_Setting.R5.encodeOffset;
+        document.getElementById("RM5_torqueRatio").value = settingJson.Motor_Setting.R5.torqueRatio;
+        document.getElementById("RM5_torque").value = settingJson.Motor_Setting.R5.drivingTorque;
+
+        document.getElementById("RM6_encodeLow").value = settingJson.Motor_Setting.R6.encodeLow;
+        document.getElementById("RM6_encodeHigh").value = settingJson.Motor_Setting.R6.encodeHigh;
+        document.getElementById("RM6_torqueLow").value = settingJson.Motor_Setting.R6.torqueLow;
+        document.getElementById("RM6_torqueHigh").value = settingJson.Motor_Setting.R6.torqueHigh;
+        document.getElementById("RM6_encodeOffset").value = settingJson.Motor_Setting.R6.encodeOffset;
+        document.getElementById("RM6_torqueRatio").value = settingJson.Motor_Setting.R6.torqueRatio;
+        document.getElementById("RM6_torque").value = settingJson.Motor_Setting.R6.drivingTorque;
+        
+        document.getElementById("RM7_encodeLow").value = settingJson.Motor_Setting.R7.encodeLow;
+        document.getElementById("RM7_encodeHigh").value = settingJson.Motor_Setting.R7.encodeHigh;
+        document.getElementById("RM7_torqueLow").value = settingJson.Motor_Setting.R7.torqueLow;
+        document.getElementById("RM7_torqueHigh").value = settingJson.Motor_Setting.R7.torqueHigh;
+        document.getElementById("RM7_encodeOffset").value = settingJson.Motor_Setting.R7.encodeOffset;
+        document.getElementById("RM7_torqueRatio").value = settingJson.Motor_Setting.R7.torqueRatio;
+        document.getElementById("RM7_torque").value = settingJson.Motor_Setting.R7.drivingTorque;
+
+        document.getElementById("RM8_encodeLow").value = settingJson.Motor_Setting.R8.encodeLow;
+        document.getElementById("RM8_encodeHigh").value = settingJson.Motor_Setting.R8.encodeHigh;
+        document.getElementById("RM8_torqueLow").value = settingJson.Motor_Setting.R8.torqueLow;
+        document.getElementById("RM8_torqueHigh").value = settingJson.Motor_Setting.R8.torqueHigh;
+        document.getElementById("RM8_encodeOffset").value = settingJson.Motor_Setting.R8.encodeOffset;
+        document.getElementById("RM8_torqueRatio").value = settingJson.Motor_Setting.R8.torqueRatio;
+        document.getElementById("RM8_torque").value = settingJson.Motor_Setting.R8.drivingTorque;
+    }
+    else
+    {
+        $("#log").val(
+            evt.data +"\n" + $("#log").val());
+    }
+}
+
+
+
+$("#send").click(()=>{
+    
+    updateSetting();
+
+    
+    const setting = JSON.stringify(settingJson);
+	//var f = document.getElementById("chatbox").contentDocument;
+    sock.send(setting);
+    //$("#LM1_encodeLow").val("");
+	
+});
+
+function updateSetting(){
+     
+    settingJson.Robot_Type = document.getElementById("robotType").value;
+    settingJson.Motor_Setting.L1.encodeLow = parseInt(document.getElementById("LM1_encodeLow").value);
+    settingJson.Motor_Setting.L1.encodeHigh = parseInt(document.getElementById("LM1_encodeHigh").value);
+    settingJson.Motor_Setting.L1.torqueLow = parseInt(document.getElementById("LM1_torqueLow").value);
+    settingJson.Motor_Setting.L1.torqueHigh = parseInt(document.getElementById("LM1_torqueHigh").value);
+    settingJson.Motor_Setting.L1.encodeOffset = parseInt(document.getElementById("LM1_encodeOffset").value);
+    settingJson.Motor_Setting.L1.torqueRatio = parseFloat(document.getElementById("LM1_torqueRatio").value);
+    settingJson.Motor_Setting.L1.drivingTorque = parseInt(document.getElementById("LM1_torque").value);
+
+    settingJson.Motor_Setting.L2.encodeLow = parseInt(document.getElementById("LM2_encodeLow").value)
+    settingJson.Motor_Setting.L2.encodeHigh = parseInt(document.getElementById("LM2_encodeHigh").value)
+    settingJson.Motor_Setting.L2.torqueLow = parseInt(document.getElementById("LM2_torqueLow").value);
+    settingJson.Motor_Setting.L2.torqueHigh = parseInt(document.getElementById("LM2_torqueHigh").value);
+    settingJson.Motor_Setting.L2.encodeOffset = parseInt(document.getElementById("LM2_encodeOffset").value)
+    settingJson.Motor_Setting.L2.torqueRatio = parseFloat(document.getElementById("LM2_torqueRatio").value);
+    settingJson.Motor_Setting.L2.drivingTorque = parseInt(document.getElementById("LM2_torque").value);
+
+    settingJson.Motor_Setting.L3.encodeLow = parseInt(document.getElementById("LM3_encodeLow").value)
+    settingJson.Motor_Setting.L3.encodeHigh = parseInt(document.getElementById("LM3_encodeHigh").value)
+    settingJson.Motor_Setting.L3.torqueLow = parseInt(document.getElementById("LM3_torqueLow").value);
+    settingJson.Motor_Setting.L3.torqueHigh = parseInt(document.getElementById("LM3_torqueHigh").value);
+    settingJson.Motor_Setting.L3.encodeOffset = parseInt(document.getElementById("LM3_encodeOffset").value)
+    settingJson.Motor_Setting.L3.torqueRatio = parseFloat(document.getElementById("LM3_torqueRatio").value);
+    settingJson.Motor_Setting.L3.drivingTorque = parseInt(document.getElementById("LM3_torque").value);
+
+    settingJson.Motor_Setting.L4.encodeLow = parseInt(document.getElementById("LM4_encodeLow").value)
+    settingJson.Motor_Setting.L4.encodeHigh = parseInt(document.getElementById("LM4_encodeHigh").value)
+    settingJson.Motor_Setting.L4.torqueLow = parseInt(document.getElementById("LM4_torqueLow").value);
+    settingJson.Motor_Setting.L4.torqueHigh = parseInt(document.getElementById("LM4_torqueHigh").value);
+    settingJson.Motor_Setting.L4.encodeOffset = parseInt(document.getElementById("LM4_encodeOffset").value)
+    settingJson.Motor_Setting.L4.torqueRatio = parseFloat(document.getElementById("LM4_torqueRatio").value);
+    settingJson.Motor_Setting.L4.drivingTorque = parseInt(document.getElementById("LM4_torque").value);
+
+    settingJson.Motor_Setting.L5.encodeLow = parseInt(document.getElementById("LM5_encodeLow").value)
+    settingJson.Motor_Setting.L5.encodeHigh = parseInt(document.getElementById("LM5_encodeHigh").value)
+    settingJson.Motor_Setting.L5.torqueLow = parseInt(document.getElementById("LM5_torqueLow").value);
+    settingJson.Motor_Setting.L5.torqueHigh = parseInt(document.getElementById("LM5_torqueHigh").value);
+    settingJson.Motor_Setting.L5.encodeOffset = parseInt(document.getElementById("LM5_encodeOffset").value)
+    settingJson.Motor_Setting.L5.torqueRatio = parseFloat(document.getElementById("LM5_torqueRatio").value);
+    settingJson.Motor_Setting.L5.drivingTorque = parseInt(document.getElementById("LM5_torque").value);
+
+    settingJson.Motor_Setting.L6.encodeLow = parseInt(document.getElementById("LM6_encodeLow").value)
+    settingJson.Motor_Setting.L6.encodeHigh = parseInt(document.getElementById("LM6_encodeHigh").value)
+    settingJson.Motor_Setting.L6.torqueLow = parseInt(document.getElementById("LM6_torqueLow").value);
+    settingJson.Motor_Setting.L6.torqueHigh = parseInt(document.getElementById("LM6_torqueHigh").value);
+    settingJson.Motor_Setting.L6.encodeOffset = parseInt(document.getElementById("LM6_encodeOffset").value)
+    settingJson.Motor_Setting.L6.torqueRatio = parseFloat(document.getElementById("LM6_torqueRatio").value);
+    settingJson.Motor_Setting.L6.drivingTorque = parseInt(document.getElementById("LM6_torque").value);
+
+    settingJson.Motor_Setting.L7.encodeLow = parseInt(document.getElementById("LM7_encodeLow").value)
+    settingJson.Motor_Setting.L7.encodeHigh = parseInt(document.getElementById("LM7_encodeHigh").value)
+    settingJson.Motor_Setting.L7.torqueLow = parseInt(document.getElementById("LM7_torqueLow").value);
+    settingJson.Motor_Setting.L7.torqueHigh = parseInt(document.getElementById("LM7_torqueHigh").value);
+    settingJson.Motor_Setting.L7.encodeOffset = parseInt(document.getElementById("LM7_encodeOffset").value)
+    settingJson.Motor_Setting.L7.torqueRatio = parseFloat(document.getElementById("LM7_torqueRatio").value);
+    settingJson.Motor_Setting.L7.drivingTorque = parseInt(document.getElementById("LM7_torque").value);
+
+
+    settingJson.Motor_Setting.L8.encodeLow = parseInt(document.getElementById("LM8_encodeLow").value)
+    settingJson.Motor_Setting.L8.encodeHigh = parseInt(document.getElementById("LM8_encodeHigh").value)
+    settingJson.Motor_Setting.L8.torqueLow = parseInt(document.getElementById("LM8_torqueLow").value);
+    settingJson.Motor_Setting.L8.torqueHigh = parseInt(document.getElementById("LM8_torqueHigh").value);
+    settingJson.Motor_Setting.L8.encodeOffset = parseInt(document.getElementById("LM8_encodeOffset").value)
+    settingJson.Motor_Setting.L8.torqueRatio = parseFloat(document.getElementById("LM8_torqueRatio").value);
+    settingJson.Motor_Setting.L8.drivingTorque = parseInt(document.getElementById("LM8_torque").value);
+
+    settingJson.Motor_Setting.R1.encodeLow = parseInt(document.getElementById("RM1_encodeLow").value)
+    settingJson.Motor_Setting.R1.encodeHigh = parseInt(document.getElementById("RM1_encodeHigh").value)
+    settingJson.Motor_Setting.R1.torqueLow = parseInt(document.getElementById("RM1_torqueLow").value);
+    settingJson.Motor_Setting.R1.torqueHigh = parseInt(document.getElementById("RM1_torqueHigh").value);
+    settingJson.Motor_Setting.R1.encodeOffset = parseInt(document.getElementById("RM1_encodeOffset").value)
+    settingJson.Motor_Setting.R1.torqueRatio = parseFloat(document.getElementById("RM1_torqueRatio").value);
+    settingJson.Motor_Setting.R1.drivingTorque = parseInt(document.getElementById("RM1_torque").value);
+    
+    settingJson.Motor_Setting.R2.encodeLow = parseInt(document.getElementById("RM2_encodeLow").value)
+    settingJson.Motor_Setting.R2.encodeHigh = parseInt(document.getElementById("RM2_encodeHigh").value)
+    settingJson.Motor_Setting.R2.torqueLow = parseInt(document.getElementById("RM2_torqueLow").value);
+    settingJson.Motor_Setting.R2.torqueHigh = parseInt(document.getElementById("RM2_torqueHigh").value);
+    settingJson.Motor_Setting.R2.encodeOffset = parseInt(document.getElementById("RM2_encodeOffset").value)
+    settingJson.Motor_Setting.R2.torqueRatio = parseFloat(document.getElementById("RM2_torqueRatio").value);
+    settingJson.Motor_Setting.R2.drivingTorque = parseInt(document.getElementById("RM2_torque").value);
+
+    settingJson.Motor_Setting.R3.encodeLow = parseInt(document.getElementById("RM3_encodeLow").value)
+    settingJson.Motor_Setting.R3.encodeHigh = parseInt(document.getElementById("RM3_encodeHigh").value)
+    settingJson.Motor_Setting.R3.torqueLow = parseInt(document.getElementById("RM3_torqueLow").value);
+    settingJson.Motor_Setting.R3.torqueHigh = parseInt(document.getElementById("RM3_torqueHigh").value);
+    settingJson.Motor_Setting.R3.encodeOffset = parseInt(document.getElementById("RM3_encodeOffset").value)
+    settingJson.Motor_Setting.R3.torqueRatio = parseFloat(document.getElementById("RM3_torqueRatio").value);
+    settingJson.Motor_Setting.R3.drivingTorque = parseInt(document.getElementById("RM3_torque").value);
+
+    settingJson.Motor_Setting.R4.encodeLow = parseInt(document.getElementById("RM4_encodeLow").value)
+    settingJson.Motor_Setting.R4.encodeHigh = parseInt(document.getElementById("RM4_encodeHigh").value)
+    settingJson.Motor_Setting.R4.torqueLow = parseInt(document.getElementById("RM4_torqueLow").value);
+    settingJson.Motor_Setting.R4.torqueHigh = parseInt(document.getElementById("RM4_torqueHigh").value);
+    settingJson.Motor_Setting.R4.encodeOffset = parseInt(document.getElementById("RM4_encodeOffset").value)
+    settingJson.Motor_Setting.R4.torqueRatio = parseFloat(document.getElementById("RM4_torqueRatio").value);
+    settingJson.Motor_Setting.R4.drivingTorque = parseInt(document.getElementById("RM4_torque").value);
+
+    settingJson.Motor_Setting.R5.encodeLow = parseInt(document.getElementById("RM5_encodeLow").value)
+    settingJson.Motor_Setting.R5.encodeHigh = parseInt(document.getElementById("RM5_encodeHigh").value)
+    settingJson.Motor_Setting.R5.torqueLow = parseInt(document.getElementById("RM5_torqueLow").value);
+    settingJson.Motor_Setting.R5.torqueHigh = parseInt(document.getElementById("RM5_torqueHigh").value);
+    settingJson.Motor_Setting.R5.encodeOffset = parseInt(document.getElementById("RM5_encodeOffset").value)
+    settingJson.Motor_Setting.R5.torqueRatio = parseFloat(document.getElementById("RM5_torqueRatio").value);
+    settingJson.Motor_Setting.R5.drivingTorque = parseInt(document.getElementById("RM5_torque").value);
+
+    settingJson.Motor_Setting.R6.encodeLow = parseInt(document.getElementById("RM6_encodeLow").value)
+    settingJson.Motor_Setting.R6.encodeHigh = parseInt(document.getElementById("RM6_encodeHigh").value)
+    settingJson.Motor_Setting.R6.torqueLow = parseInt(document.getElementById("RM6_torqueLow").value);
+    settingJson.Motor_Setting.R6.torqueHigh = parseInt(document.getElementById("RM6_torqueHigh").value);
+    settingJson.Motor_Setting.R6.encodeOffset = parseInt(document.getElementById("RM6_encodeOffset").value)
+    settingJson.Motor_Setting.R6.torqueRatio = parseFloat(document.getElementById("RM6_torqueRatio").value);
+    settingJson.Motor_Setting.R6.drivingTorque = parseInt(document.getElementById("RM6_torque").value);
+
+    settingJson.Motor_Setting.R7.encodeLow = parseInt(document.getElementById("RM7_encodeLow").value)
+    settingJson.Motor_Setting.R7.encodeHigh = parseInt(document.getElementById("RM7_encodeHigh").value)
+    settingJson.Motor_Setting.R7.torqueLow = parseInt(document.getElementById("RM7_torqueLow").value);
+    settingJson.Motor_Setting.R7.torqueHigh = parseInt(document.getElementById("RM7_torqueHigh").value);
+    settingJson.Motor_Setting.R7.encodeOffset = parseInt(document.getElementById("RM7_encodeOffset").value)
+    settingJson.Motor_Setting.R7.torqueRatio = parseFloat(document.getElementById("RM7_torqueRatio").value);
+    settingJson.Motor_Setting.R7.drivingTorque = parseInt(document.getElementById("RM7_torque").value);
+
+    settingJson.Motor_Setting.R8.encodeLow = parseInt(document.getElementById("RM8_encodeLow").value)
+    settingJson.Motor_Setting.R8.encodeHigh = parseInt(document.getElementById("RM8_encodeHigh").value)
+    settingJson.Motor_Setting.R8.torqueLow = parseInt(document.getElementById("RM8_torqueLow").value);
+    settingJson.Motor_Setting.R8.torqueHigh = parseInt(document.getElementById("RM8_torqueHigh").value);
+    settingJson.Motor_Setting.R8.encodeOffset = parseInt(document.getElementById("RM8_encodeOffset").value)
+    settingJson.Motor_Setting.R8.torqueRatio = parseFloat(document.getElementById("RM8_torqueRatio").value);
+    settingJson.Motor_Setting.R8.drivingTorque = parseInt(document.getElementById("RM8_torque").value);
+}
+
+$("#save").click(()=>{
+    settingJson['Save'] = true;
+    
+    updateSetting();
+    
+    const setting = JSON.stringify(settingJson);
+	//var f = document.getElementById("chatbox").contentDocument;
+    sock.send(setting);
+});
+
+$("#read").click(()=>{
+    //const setting = "Read_Setting";
+    sock.send(JSON.stringify({ Read_Setting: true }));
+    // var setting = JSON.stringify(settingJson);
+    // var data = JSON.parse(setting);
+    // data.Left[0].encodeLow = parseInt(document.getElementById("LM1_encodeLow").value)
+    // data.Left[0].encodeHigh = parseInt(document.getElementById("LM1_encodeHigh").value)
+    // data.Left[0].encodeOffset = parseInt(document.getElementById("LM1_encodeOffset").value)
+
+    // data.Left[1].encodeLow = parseInt(document.getElementById("LM2_encodeLow").value)
+    // data.Left[1].encodeHigh = parseInt(document.getElementById("LM2_encodeHigh").value)
+    // data.Left[1].encodeOffset = parseInt(document.getElementById("LM2_encodeOffset").value)
+    
+	// //var f = document.getElementById("chatbox").contentDocument;
+    // sock.send(data);
+    //$("#LM1_encodeLow").val("");
+	
+});
+
+// fileInput.addEventListener('change', function(e) {
+//     var file = fileInput.files[0];
+//     var textType = /text.*/;
+    
+//     if (file.type.match(textType)) {
+//         var reader = new FileReader();
+        
+//         reader.onload = function(e) {
+//             var content = reader.result;
+//             //Here the content has been read successfuly
+//             alert(content);
+//         }
+        
+//         reader.readAsText(file);	
+//     } else {
+//         fileDisplayArea.innerText = "File not supported!"
+//     }
+// });
+
+
+
+// document.getElementById("openfile").addEventListener('change', function() {
+//       var fr = new FileReader();
+//       fr.onload = function() {
+//         //var data = this.result;
+//         JsonObj  = JSON.parse(this.result);
+//         //const data = JSON.stringify(this.result);
+//         //console.log(JsonObj);
+//         const data = JSON.stringify(JsonObj);
+//         document.getElementById("filecontents").textContent = data;
+        
+
+//       }
+//       fr.readAsText(this.files[0]);
+//     })
+
+$("#send_torque").click(()=>{
+    //const setting = JSON.stringify(JsonObj);
+    var cmdJson = { Ctrl_Command : "Torque_Sim" };
+    cmdJson["TorqueSimHand"] = document.getElementById("TorqueSimHand").value;
+    cmdJson["TorqueSimNum"] = document.getElementById("TorqueSimNum").value;
+    cmdJson["TorqueSimFormat"] = document.getElementById("TorqueSimFormat").value;
+    
+
+    // as maximum bufferbytes of websocket is limited to 8192 bytes
+    // Torque_sim.json is stored in RPI to perform torque simulation
+    sock.send(JSON.stringify(cmdJson));
+	
+});
+
+$("#start").click(()=>{
+    //const setting = "Read_Setting";
+    sock.send(JSON.stringify({ Ctrl_Command : "Start_Operation" }));
+	
+});
+
+$("#stop").click(()=>{
+    //const setting = "Read_Setting";
+    sock.send(JSON.stringify({ Ctrl_Command : "Stop_Operation" }));
+	
+});
+
+$("#align").click(()=>{
+    //const setting = "Read_Setting";
+    sock.send(JSON.stringify({ Ctrl_Command : "Alignment" }));
+	
+});
+
+    </script>
+</body>
+</html>
